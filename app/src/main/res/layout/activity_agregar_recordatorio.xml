@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_agregar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <EditText
+        android:id="@+id/editTextAsunto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:hint="Asunto"/>
+
+    <EditText
+        android:id="@+id/editTextDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:minHeight="48dp"
+        android:hint="Descripcion"/>
+
+    <EditText
+        android:id="@+id/editTextFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:clickable="true"
+        android:drawableEnd="@android:drawable/ic_menu_today"
+        android:focusable="false"
+        android:hint="Fecha"
+        android:inputType="none"
+        android:minHeight="48dp"
+        android:onClick="showDatePickerDialog" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFecha"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editTextHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:clickable="true"
+        android:drawableEnd="@android:drawable/ic_menu_recent_history"
+        android:focusable="false"
+        android:hint="Hora"
+        android:inputType="none"
+        android:minHeight="48dp"
+        android:onClick="showTimePickerDialog" />
+
+    <TimePicker
+        android:id="@+id/timePickerHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextHora"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editTextHoraRecordatorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:minHeight="48dp"
+        android:hint="Avisar x horas antes"/>
+
+    <Button
+        android:id="@+id/buttonAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Recordatorio"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/timePicker" />
+
+</RelativeLayout>
